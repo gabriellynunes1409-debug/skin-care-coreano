@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dicas de Skin Care Coreano</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8e8ff; /* Lilás claro */
+            color: #8b5a8b; /* Roxo suave */
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        body.dark-mode {
+            background-color: #2c2c2c;
+            color: #e0e0e0;
+        }
+        header {
+            background-color: #ffb6c1; /* Rosa claro */
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        nav {
+            background-color: #dda0dd; /* Lilás médio */
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 900px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            transition: background-color 0.3s;
+        }
+        body.dark-mode section {
+            background-color: #3a3a3a;
+        }
+        h2 {
+            color: #ffb6c1;
+        }
+        h3 {
+            color: #dda0dd;
+        }
+        ul, ol {
+            margin-left: 20px;
+        }
+        .product {
+            margin-bottom: 20px;
+            padding: 10px;
+            border-left: 5px solid #ffb6c1;
+            background-color: #fefefe;
+            transition: background-color 0.3s;
+        }
+        body.dark-mode .product {
+            background-color: #4a4a4a;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #dda0dd;
+            color: white;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        /* Estilos para o slider */
+        .slider {
+            position: relative;
+            max-width: 800px;
+            margin: 20px auto;
+            overflow: hidden;
+        }
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+        .buttons {
+            text-align: center;
+            margin-top: 10px;
+        }
+        button {
+            background-color: #ffb6c1;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #dda0dd;
+        }
+        /* Estilos para o botão de rolagem suave */
+        .scroll-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ffb6c1;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+        }
+        .scroll-btn:hover {
+            background-color: #dda0dd;
+        }
+        /* Estilos para o quiz */
+        .quiz {
+            text-align: center;
+        }
+        .question {
+            margin: 20px 0;
+        }
+        .options {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .option {
+            background-color: #ffb6c1;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .option:hover {
+            background-color: #dda0dd;
+        }
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        /* Estilos para o timer */
+        .timer {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .timer-display {
+            font-size: 2em;
+            margin: 10px 0;
+        }
+        /* Estilos para o modo escuro */
+        .toggle-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #ffb6c1;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .toggle-btn:hover {
+            background-color: #dda0dd;
+        }
+    </style>
+</head>
+<body>
+    <button class="toggle-btn" onclick="toggleDarkMode()">Modo Escuro</button>
+    
+    <header>
+        <h1>Dicas de Skin Care Coreano</h1>
+        <p>Descubra a rotina de beleza coreana para uma pele radiante e saudável. Este guia completo cobre desde a limpeza básica até os melhores produtos, com dicas práticas para todos os tipos de pele.</p>
+    </header>
+    
+    <nav>
+        <a href="#introducao" onclick="smoothScroll('#introducao')">Introdução</a>
+        <a href="#quiz" onclick="smoothScroll('#quiz')">Quiz de Pele</a>
+        <a href="#rotina" onclick="smoothScroll('#rotina')">Rotina Completa</a>
+        <a href="#produtos" onclick="smoothScroll('#produtos')">Melhores Produtos</a>
+        <a href="#ingredientes" onclick="smoothScroll('#ingredientes')">Ingredientes Chave</a>
+        <a href="#dicas" onclick="smoothScroll('#dicas')">Dicas Extras</a>
+        <a href="#mitos" onclick="smoothScroll('#mitos')">Mitos e Verdades</a>
+    </nav>
+    
+    <section id="introducao">
+        <h2>Introdução ao Skin Care Coreano</h2>
+        <p>O skin care coreano, também conhecido como "K-beauty", revolucionou a indústria da beleza global com sua filosofia de "camadas" (layering). Diferente das rotinas ocidentais que focam em poucos produtos, a rotina coreana aplica múltiplas camadas leves para limpar, hidratar e proteger a pele. Isso resulta em uma pele mais clara, hidratada e resistente a imperfeições.</p>
+        <p>Por que funciona? Os produtos coreanos são ricos em ingredientes naturais como chá verde, centella asiática e ácido hialurônico, e enfatizam a prevenção em vez de correção. A rotina típica tem 10 passos, mas pode ser adaptada para peles sensíveis ou ocupadas. Estudos mostram que essa abordagem reduz acne em até 50% e melhora a elasticidade da pele.</p>
+        <img src="https://via.placeholder.com/800x400?text=Rotina+Coreana+de+Skin+Care" alt="Ilustração de rotina coreana">
+    </section>
+    
+    <section id="quiz">
+        <h2>Quiz: Descubra Seu Tipo de Pele</h2>
+        <div class="quiz">
+            <div id="question1" class="question">
+                <p>1. Como sua pele se sente ao final do dia?</p>
+                <div class="options">
+                    <div class="option" onclick="answer(1, 'seca')">Seca e apertada</div>
+                    <div class="option" onclick="answer(1, 'oleosa')">Oleosa e brilhante</div>
+                    <div class="option" onclick="answer(1, 'mista')">Mista (zona T oleosa, resto normal)</div>
+                    <div class="option" onclick="answer(1, 'normal')">Normal e confortável</div>
+                </div>
+            </div>
+            <div id="question2" class="question" style="display: none;">
+                <p>2. Você tem acne ou poros dilatados?</p>
+                <div class="options">
+                    <div class="option" onclick="answer(2, 'sim')">Sim, frequentemente</div>
+                    <div class="option" onclick="answer(2, 'nao')">Não, raramente</div>
+                </div>
+            </div>
+            <div id="question3" class="question" style="display: none;">
+                <p>3. Sua pele fica vermelha facilmente?</p>
+                <div class="options">
+                    <div class="option" onclick="answer(3, 'sim')">Sim</div>
+                    <div class="option" onclick="answer(3, 'nao')">Não</div>
+                </div>
+            </div>
+            <div id="result" class="result" style="display: none;"></div>
+        </div>
+    </section>
+    
+    <section id="rotina">
+        <h2>Rotina Completa de Skin Care Coreano</h2>
+        <p>A rotina coreana é dividida em etapas matinais e noturnas. Matinal: Foco em hidratação e proteção. Noturna: Reparação e limpeza profunda. Aqui vai um guia detalhado passo a passo, com benefícios e como aplicar:</p>
+        <ol>
+            <li><strong>Limpeza com Óleo (Oil Cleanser):</strong> Aplique em pele seca, massageie suavemente por 1-2 minutos para dissolver maquiagem e óleo. Benefícios: Remove impurezas sem ressecar. Como aplicar: Enxágue com água morna.</li>
+            <li><strong>Limpeza com Água (Water-Based Cleanser):</strong> Use um gel ou espuma para remover resíduos. Benefícios: Equilibra o pH. Como aplicar: Massageie em círculos e enxágue.</li>
+            <li><strong>Esfoliação (Exfoliation):</strong> 2-3 vezes por semana. Use AHA/BHA para renovar células. Benefícios: Melhora textura e reduz poros. Como aplicar: Aplique à noite, evite sol.</li>
+            <li><strong>Tonificação (Toning):</strong> Aplique com algodão ou mãos. Benefícios: Fecha poros e hidrata. Como aplicar: Após limpeza, deixe absorver.</li>
+            <li><strong>Essência (Essence):</strong> Produto aquoso para hidratação profunda. Benefícios: Prepara a pele para soros. Como aplicar: Bata levemente na pele.</li>
+            <li><strong>Soro (Serum):</strong> Concentrado para problemas específicos (ex: vitamina C para brilho). Benefícios: Trata rugas ou manchas. Como aplicar: 2-3 gotas, massageie.</li>
+            <li><strong>Máscara Facial (Sheet Mask):</strong> 2-3 vezes/semana. Benefícios: Nutrição intensa. Como aplicar: Deixe por 15-20 min, remova e massageie o restante.</li>
+            <li><strong>Tratamento Noturno (Night Treatment):</strong> Cremes para olhos ou spots. Benefícios: Reparação overnight. Como aplicar: À noite, evite área dos olhos se irritante.</li>
+            <li><strong>Hidratação (Moisturizer):</strong> Creme leve para selar umidade. Benefícios: Protege barreira cutânea. Como aplicar: Aplique generosamente.</li>
+            <li><strong>Proteção Solar (Sunscreen):</strong> FPS 30+ diário. Benefícios: Previne envelhecimento. Como aplicar: Último passo, reaplique a cada 2 horas.</li>
+        </ol>
+        <p>Dica: Para peles oleosas, pule a essência se sentir pesado. Para secas, adicione mais hidratação.</p>
+        
+        <!-- Timer para máscara -->
+        <div class="timer">
+            <h3>Timer para Máscara Facial</h3>
+            <div class="timer-display" id="timer">15:00</div>
+            <button onclick="startTimer()">Iniciar Timer (15 min)</button>
+            <button onclick="resetTimer()">Resetar</button>
+        </div>
+    </section>
+    
+    <section id="produtos">
+        <h2>Melhores Produtos Recomendados</h2>
+        <p>Selecionamos produtos acessíveis e eficazes, baseados em reviews e popularidade. Incluímos preços aproximados (em reais) e onde comprar (ex: Amazon, Sephora). Teste sempre!</p>
+        
+        <!-- Slider de Produtos -->
+        <div class="slider">
+            <div class="slides">
+                <div class="slide">
+                    <img src="https://via.placeholder.com/800x400?text=Banila+Co+Clean+It+Zero" alt="Banila Co Clean It Zero">
+                    <h3>Banila Co Clean It Zero</h3>
+                    <p>Óleo de limpeza suave. Preço: R$ 50-70.</p>
+                </div>
+                <div class="slide">
+                    <img src="https://via.placeholder.com/800x400?text=Cosrx+Low+pH+Gel+Cleanser" alt="Cosrx Low pH Good Morning Gel Cleanser">
+                    <h3>Cosrx Low pH Good Morning Gel Cleanser</h3>
+                    <p>Gel cremoso para limpeza. Preço: R$ 40-60.</p>
+                </div>
+                <div class="slide">
+                    <img src="https://via.placeholder.com/800x400?text=The+Ordinary+Hyaluronic+Acid" alt="The Ordinary Hyaluronic Acid">
+                    <h3>The Ordinary Hyaluronic Acid 2% + B5</h3>
+                    <p>Soro hidratante. Preço: R$ 50-70.</p>
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <button onclick="prevSlide()">Anterior</button>
+            <button onclick="nextSlide()">Próximo</button>
+        </div>
+        
+        <h3>Limpeza</h3>
+        <div class="product">
+            <strong>Banila Co Clean It Zero:</strong> Óleo de limpeza suave com fragrância leve. Preço: R$ 50-70. Benefícios: Remove maquiagem sem ressecar. Onde comprar: Amazon.
+        </div>
+        <div class="product">
+            <strong>Cosrx Low pH Good Morning Gel Cleanser:</strong> Gel cremoso para limpeza diária. Preço: R$ 40-60. Benefícios: Equilibra pH, ideal para peles sensíveis. Onde comprar: Sephora.
+        </div>
+        
+        <h3>Esfoliação e Tonificação</h3>
+        <div class="product">
+            <strong>Cosrx AHA/BHA Clarifying Treatment:</strong> Tratamento químico com ácido salicílico. Preço: R$ 60-80. Benefícios: Reduz acne e poros. Onde comprar: Amazon.
+        </div>
+        <div class="product">
+            <strong>Klairs Rich Moist Soothing Tonic:</strong> Tônico hidratante com aloe vera. Preço: R$ 70-90. Benefícios: Calma irritações. Onde comprar: Site oficial.
+        </div>
+        
+        <h3>Essências e Soros</h3>
+        <div class="product">
+            <strong>Sulwhasoo First Care Activating Serum:</strong> Essência luxuosa com ginseng. Preço: R$ 200-300. Benefícios: Hidratação profunda. Onde comprar: Sephora.
+        </div>
+        <div class="product">
+            <strong>The Ordinary Hyaluronic Acid 2% + B5:</strong> Soro acessível com ácido hialurônico. Preço: R$ 50-70. Benefícios: Plumping e hidratação. Onde comprar: Amazon.
+        </div>
+        
+        <h3>Máscaras e Tratamentos</h3>
+        <div class="product">
+            <strong>TonyMoly Egg Pore Tightening Mask:</strong> Máscara de folha com clara de ovo. Preço: R$ 20-30. Benefícios: Fecha poros. Onde comprar: Amazon.
+        </div>
+        <div class="product">
+            <strong>Purito Centella Recovery Serum:</strong> Soro calmante com centella. Preço: R$ 80-100. Benefícios: Cura acne e irritações. Onde comprar: Sephora.
+        </div>
+        
+        <h3>Hidratação e Proteção</h3>
+        <div class="product">
+            <strong>Innisfree Green Tea Seed Serum:</strong> Hidratante leve com chá verde. Preço: R$ 60-80. Benefícios: Antioxidante. Onde comprar: Site oficial.
+        </div>
+        <div class="product">
+            <strong>Cosrx Oil-Free Ultra-Moisturizing Lotion with SPF 50:</strong> Hidratante com FPS. Preço: R$ 70-90. Benefícios: Proteção e hidratação. Onde comprar: Amazon.
+        </div>
+    </section>
+    
+    <section id="ingredientes">
+        <h2>Ingredientes Chave no Skin Care Coreano</h2>
+        <p>Os produtos coreanos usam ingredientes naturais e científicos. Aqui os principais:</p>
+        <ul>
+            <li><strong>Chá Verde (Green Tea):</strong> Antioxidante, combate radicais livres e reduz inflamação.</li>
+            <li><strong>Centella Asiática:</strong> Calmante, acelera cicatrização e reduz vermelhidão.</li>
+            <li><strong>Ácido Hialurônico:</strong> Hidrata profundamente, retém umidade.</li>
+            <li><strong>Vitamina C:</strong> Ilumina pele, reduz manchas.</li>
+            <li><strong>AHA/BHA:</strong> Esfoliam suavemente, melhoram textura.</li>
+            <li><strong>Ginseng:</strong> Anti-envelhecimento, aumenta colágeno.</li>
+        </ul>
+        <p>Dica: Verifique rótulos para evitar alérgenos como fragrâncias artificiais.</p>
+    </
